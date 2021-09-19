@@ -1,0 +1,27 @@
+
+#include <iostream>
+#include<algorithm>
+
+using namespace std;
+
+int main()
+
+{
+   int n,k;
+   cout<<"Enter length of an array: ";
+    cin>>n;
+   cout<<"Enter K: ";
+    cin>>k;
+   
+   int a[n],i;
+   
+   for(i=0;i<n;++i)
+      cin>>a[i];
+   { 
+    sort(a,a+n);
+   }
+    cout<<"K’th Smallest: "<<a[k-1];
+    cout<<"\nK’th Largest: "<<a[n-k];
+    return 0;
+   
+}
