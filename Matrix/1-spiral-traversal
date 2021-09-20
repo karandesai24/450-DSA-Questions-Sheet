@@ -1,1 +1,39 @@
+class Solution
+{
+    public:
+    vector<int> spirallyTraverse(vector<vector<int> > matrix, int r, int c)
+    {
+        
+        vector<int> ans;
+        int top = 0, bottom = r, right = c, left = 0;
+
+        while (top < bottom && left < right) {
+            int i;
+
+            i = left;
+            while (i < right) ans.push_back(matrix[top][i++]);
+            top++;
+
+            
+            i = top;
+            while (i < bottom) ans.push_back(matrix[i++][right - 1]);
+            right--;
+
+           
+            if (top < bottom) {
+                i = right - 1;
+                while (i >= left) ans.push_back(matrix[bottom - 1][i--]);
+                bottom--;
+            }
+
+           
+            if (left < right) {
+                i = bottom - 1;
+                while (i >= top) ans.push_back(matrix[i--][left]);
+                left++;
+            }
+        }
+        return ans;
+    }
+};
 
