@@ -20,8 +20,8 @@ int main()
    { 
     sort(a,a+n);
    }
-    cout<<"K’th Smallest: "<<a[k-1];
-    cout<<"\nK’th Largest: "<<a[n-k];
+    cout<<"Kâ€™th Smallest: "<<a[k-1];
+    cout<<"\nKâ€™th Largest: "<<a[n-k];
     return 0;
    
 }
